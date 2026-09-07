@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b7365b139f7aec43b23d26b7a48b5a6, type: 3}
   m_Name: MetaQuestTouchPlusControllerProfile Android
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Interactions.MetaQuestTouchPlusControllerProfile
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta Quest Touch Plus Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.metaquestplus
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4b862ee14fb479fbfe5fffe655d3ed3, type: 3}
   m_Name: MetaQuestTouchProControllerProfile Android
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.Features.Interactions.MetaQuestTouchProControllerProfile
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta Quest Touch Pro Controller Profile
   version: 0.0.1
   featureIdInternal: com.unity.openxr.feature.input.metaquestpro
@@ -1461,7 +1461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f647cc0545697264a9878224faada6d5, type: 3}
   m_Name: MetaQuestFeature Android
   m_EditorClassIdentifier: Unity.XR.OpenXR.Features.MetaQuestSupport::UnityEngine.XR.OpenXR.Features.MetaQuestSupport.MetaQuestFeature
-  m_enabled: 0
+  m_enabled: 1
   nameUi: Meta Quest Support
   version: 1.0.0
   featureIdInternal: com.unity.openxr.feature.metaquest
@@ -1664,40 +1664,40 @@ MonoBehaviour:
   m_Name: Standalone
   m_EditorClassIdentifier: Unity.XR.OpenXR::UnityEngine.XR.OpenXR.OpenXRSettings
   features:
-  - {fileID: 4866186442873874144}
-  - {fileID: -2460893495531595917}
-  - {fileID: -6364129752793026621}
-  - {fileID: 1511107536549442586}
-  - {fileID: -291568608933505142}
-  - {fileID: 3682208693022924467}
-  - {fileID: -4828187996801498632}
-  - {fileID: -7147568708036084090}
-  - {fileID: -5801345116015875182}
-  - {fileID: 8688374759607864040}
-  - {fileID: 3114913177037995877}
-  - {fileID: 2363697855959417077}
-  - {fileID: -6620761011685207930}
-  - {fileID: 3427031211800591042}
-  - {fileID: 4997932790114186572}
-  - {fileID: -57873934120187174}
-  - {fileID: -3737395094267213294}
-  - {fileID: -7456746104638751085}
-  - {fileID: 7221559849533661014}
   - {fileID: -8004383599724419869}
-  - {fileID: -8138603908277441380}
-  - {fileID: -1103861778107817730}
-  - {fileID: 6372406910680161403}
-  - {fileID: 4704466811842649683}
-  - {fileID: 4187002534981897517}
-  - {fileID: -8738161978886098459}
-  - {fileID: -4451047469744196496}
+  - {fileID: 1511107536549442586}
+  - {fileID: 7221559849533661014}
+  - {fileID: -5801345116015875182}
+  - {fileID: 3427031211800591042}
+  - {fileID: 8688374759607864040}
   - {fileID: -4890646080927946995}
-  - {fileID: 1778487112611699833}
-  - {fileID: 7394890491993214782}
-  - {fileID: -4032036841291786510}
-  - {fileID: 4701008528826403216}
   - {fileID: -3051236777035184832}
+  - {fileID: -7456746104638751085}
+  - {fileID: -1103861778107817730}
+  - {fileID: 4701008528826403216}
+  - {fileID: -7147568708036084090}
+  - {fileID: -4828187996801498632}
+  - {fileID: 6372406910680161403}
+  - {fileID: -8138603908277441380}
+  - {fileID: -4032036841291786510}
+  - {fileID: 3682208693022924467}
+  - {fileID: -8738161978886098459}
+  - {fileID: 4187002534981897517}
+  - {fileID: -6364129752793026621}
+  - {fileID: 4997932790114186572}
+  - {fileID: 3114913177037995877}
+  - {fileID: -6620761011685207930}
+  - {fileID: -57873934120187174}
   - {fileID: 2432352133019084159}
+  - {fileID: 1778487112611699833}
+  - {fileID: -2460893495531595917}
+  - {fileID: 4704466811842649683}
+  - {fileID: 2363697855959417077}
+  - {fileID: -4451047469744196496}
+  - {fileID: 4866186442873874144}
+  - {fileID: -3737395094267213294}
+  - {fileID: 7394890491993214782}
+  - {fileID: -291568608933505142}
   customLoaderName: 
   m_renderMode: 1
   m_latencyOptimization: 0
