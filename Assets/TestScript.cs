@@ -10,7 +10,7 @@ public class TestScript : MonoBehaviour
     void Start()
     {
         
-
+        Debug.Log("Hello");
         
     }
 
