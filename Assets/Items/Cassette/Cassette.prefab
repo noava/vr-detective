@@ -127,6 +127,52 @@ Transform:
   - {fileID: 1937364817264233651}
   m_Father: {fileID: 7852560730374823552}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2113858467767752057
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5823523312977116951}
+  - component: {fileID: 4724989947207038543}
+  m_Layer: 0
+  m_Name: CassetteData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5823523312977116951
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113858467767752057}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7852560730374823552}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4724989947207038543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113858467767752057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b81556791748cd6448ccaa50e315220c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  audioName: 
+  cassetteAudioClip: {fileID: 0}
 --- !u!1 &3831077891894952198
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +208,7 @@ Transform:
   - {fileID: 501630050834409010}
   - {fileID: 411464644585786137}
   - {fileID: 2135610929409475879}
+  - {fileID: 5823523312977116951}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &5741623947096582157
@@ -283,7 +330,7 @@ MonoBehaviour:
   _interactableFilters: []
   _candidateTiebreaker: {fileID: 0}
   _maxIterationsPerFrame: 3
-  _data: {fileID: 0}
+  _data: {fileID: 2113858467767752057}
   _pointableElement: {fileID: 7762673398497956393}
   _rigidbody: {fileID: 1979415119535132193}
   _distanceThreshold: 0.01

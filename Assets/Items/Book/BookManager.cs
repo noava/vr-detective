@@ -6,7 +6,8 @@ public class BookManager : MonoBehaviour
 {
     // Load the book data from a JSON file
     public TextAsset jsonFile;
-    public TextMeshPro bookTitle;
+    public TextMeshPro bookTitleOpen;
+    public TextMeshPro bookTitleClosed;
     public TextMeshProUGUI pageTitle;
     public TextMeshProUGUI pageContent;
     public Image pageImage;
@@ -29,7 +30,8 @@ public class BookManager : MonoBehaviour
     public void LoadBook(string jsonText)
     {
         activeBook = JsonUtility.FromJson<BookData>(jsonText);
-        bookTitle.text = activeBook.bookTitle;
+        bookTitleOpen.text = activeBook.bookTitle;
+        bookTitleClosed.text = activeBook.bookTitle;
         ShowPage(0);
     }
 
