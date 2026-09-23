@@ -1756,11 +1756,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5088289308849558498, guid: c50e95c3ef12e624ca2281e64d686eea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5444037739425891440, guid: c50e95c3ef12e624ca2281e64d686eea, type: 3}
+      propertyPath: m_Name
+      value: BED
       objectReference: {fileID: 0}
     - target: {fileID: 5444037739425891440, guid: c50e95c3ef12e624ca2281e64d686eea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
