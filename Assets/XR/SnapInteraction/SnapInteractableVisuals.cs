@@ -41,17 +41,26 @@ public class SnapInteractableVisuals : MonoBehaviour
 
     private void SnapInteractable_WhenSelectingInteractorViewAdded(IInteractorView obj)
     {
-        currentInteractorGameObject?.SetActive(false);
+        if (currentInteractorGameObject != null)
+        {
+            currentInteractorGameObject.SetActive(false);
+        }
     }
 
     private void SnapInteractable_WhenInteractorViewAdded(IInteractorView obj)
     {
-        currentInteractorGameObject?.SetActive(true);
+        if (currentInteractorGameObject != null)
+        {
+            currentInteractorGameObject.SetActive(true);
+        }
     }
 
     private void SnapInteractable_WhenInteractorViewRemoved(IInteractorView obj)
     {
-        currentInteractorGameObject.SetActive(false);
+        if (currentInteractorGameObject != null)
+        {
+            currentInteractorGameObject.SetActive(false);
+        }
     }
 
     private void SetupGhostModel(SnapInteractor interactor)
