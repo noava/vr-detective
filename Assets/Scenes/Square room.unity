@@ -698,7 +698,7 @@ MonoBehaviour:
   PrefabsToSpawn:
   - Labels: 4
     Prefabs:
-    - {fileID: 5626025715196867278, guid: 0538b02d145290741b1a27b2034e804e, type: 3}
+    - {fileID: 469808094018247522, guid: ac0680a0261c4c447a99575c08244e89, type: 3}
     PrefabSelection: 0
     MatchAspectRatio: 0
     CalculateFacingDirection: 0
@@ -706,8 +706,7 @@ MonoBehaviour:
     Alignment: 0
     IgnorePrefabSize: 0
   - Labels: 7344
-    Prefabs:
-    - {fileID: 5068584792260383046, guid: 8ed49c689672d2c499bdc54d3c234b0c, type: 3}
+    Prefabs: []
     PrefabSelection: 0
     MatchAspectRatio: 0
     CalculateFacingDirection: 0
@@ -715,8 +714,7 @@ MonoBehaviour:
     Alignment: 0
     IgnorePrefabSize: 0
   - Labels: 16
-    Prefabs:
-    - {fileID: 7020577189436010784, guid: 0eb271c84b5c50446ab7ef44938bcdc0, type: 3}
+    Prefabs: []
     PrefabSelection: 0
     MatchAspectRatio: 0
     CalculateFacingDirection: 0
@@ -724,8 +722,7 @@ MonoBehaviour:
     Alignment: 0
     IgnorePrefabSize: 0
   - Labels: 512
-    Prefabs:
-    - {fileID: -2597126474412462030, guid: f82d898168ebaa54ab1940178c779e80, type: 3}
+    Prefabs: []
     PrefabSelection: 0
     MatchAspectRatio: 0
     CalculateFacingDirection: 0
@@ -743,7 +740,7 @@ MonoBehaviour:
     IgnorePrefabSize: 0
   - Labels: 256
     Prefabs:
-    - {fileID: 4651286085895138261, guid: d950217b9f1aa07469ac2dafb9149599, type: 3}
+    - {fileID: 2663763446714670152, guid: 2b47b2ab009f2294b9b67d53d05fb216, type: 3}
     PrefabSelection: 0
     MatchAspectRatio: 0
     CalculateFacingDirection: 0
@@ -1321,7 +1318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1475375741
 MonoBehaviour:
   m_ObjectHideFlags: 0
