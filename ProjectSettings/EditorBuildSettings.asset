@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 3df0fc25c76892a4fb770b200a8ed244
-  - enabled: 0
     path: Assets/Scenes/Room test.unity
     guid: e1a1c6005846124469d7fe2a923c5ba0
   - enabled: 0
@@ -17,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Square room.unity
     guid: 2fa9dd797b03be04a81623b809aed1cf
+  - enabled: 0
+    path: Assets/Scenes/ItemTestingScene.unity
+    guid: 3df0fc25c76892a4fb770b200a8ed244
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 285cbc7ef8b970b4e8f667dbeac338dc, type: 2}
