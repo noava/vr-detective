@@ -107,3 +107,4 @@ InitTestScene*.unity*
 
 # Other files we use for the project that are not needed in version control
 /Other
+/test1_BackUpThisFolder_ButDontShipItWithYourGame

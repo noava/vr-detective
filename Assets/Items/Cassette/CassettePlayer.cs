@@ -3,6 +3,8 @@ using UnityEngine;
 public class CassettePlayer : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip  insertTakeoutSound;
+    [SerializeField] private AudioClip  buttonPressSound;
 
     public void InputCassette (GameObject snappedObject)
     {
@@ -13,6 +15,9 @@ public class CassettePlayer : MonoBehaviour
         {
             _audioSource.clip = cassette.cassetteAudioClip;
         }
+
+        _audioSource.PlayOneShot(insertTakeoutSound, 1);
+
     }
 
     public void RemoveCassette()
@@ -22,6 +27,9 @@ public class CassettePlayer : MonoBehaviour
             _audioSource.Stop();
             _audioSource.clip = null;
         }
+
+        _audioSource.PlayOneShot(insertTakeoutSound, 0.5f);
+
     }
 
     public void PlayCassette()
@@ -30,6 +38,9 @@ public class CassettePlayer : MonoBehaviour
         {
             _audioSource.Play();
         }
+
+        _audioSource.PlayOneShot(buttonPressSound, 0.5f);
+
     }
 
     public void PauseCassette()
@@ -38,6 +49,8 @@ public class CassettePlayer : MonoBehaviour
         {
             _audioSource.Pause();
         }
+
+        _audioSource.PlayOneShot(buttonPressSound, 1);
     }
 
     public void StopCassette()
@@ -46,5 +59,8 @@ public class CassettePlayer : MonoBehaviour
         {
             _audioSource.Stop();
         }
+
+        _audioSource.PlayOneShot(buttonPressSound, 1);
+        
     }
 }
