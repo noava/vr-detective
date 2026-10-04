@@ -9,7 +9,9 @@ public class BookManager : MonoBehaviour
     public TextMeshPro bookTitleOpen;
     public TextMeshPro bookTitleClosed;
     public TextMeshProUGUI pageTitle;
-    public TextMeshProUGUI pageContent;
+    public TextMeshProUGUI pageContentSymptoms;
+    public TextMeshProUGUI pageContentCause;
+    public TextMeshProUGUI pageContentTreatment;
     public Image pageImage;
 
     private BookData activeBook;
@@ -39,8 +41,10 @@ public class BookManager : MonoBehaviour
     {
         BookPage page = activeBook.pages[index];
         
-        pageTitle.text = page.title;
-        pageContent.text = page.content;
+        pageTitle.text = $"<b>{page.plantName}</b>\n<size=42>{page.scientificName}</size>\n";
+        pageContentSymptoms.text = "Symptoms:\n" + page.symptoms;
+        pageContentCause.text = "Cause:\n" + page.cause;
+        pageContentTreatment.text = "Treatment:\n" + page.treatment;
         
         Sprite[] allSprites = Resources.LoadAll<Sprite>(page.imagePath);
 
@@ -50,6 +54,7 @@ public class BookManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("Next Page")]
     public void nextPage()
     {
         if (currentPageIndex < activeBook.pages.Count - 1)
@@ -58,7 +63,8 @@ public class BookManager : MonoBehaviour
             ShowPage(currentPageIndex);
         }
     }
-
+    
+    [ContextMenu("Previous Page")]
     public void previousPage()
     {
         if (currentPageIndex > 0)

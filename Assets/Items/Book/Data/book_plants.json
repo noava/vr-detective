@@ -3,26 +3,74 @@
   "pages": [
     {
       "pageNumber": 1,
-      "title": "Lilly of the valley",
-      "content": "Lilly of the valley is a beautiful flower, but it contains toxic compounds that can be fatal if ingested.",
+      "plantName": "Foxglove",
+      "scientificName": "Digitalis purpurea",
+      "symptoms": "Nausea, vomiting, dizziness and an abnormal heartbeat.",
+      "cause": "Cardiac glycosides in the plant can disrupt normal heart function.",
+      "treatment": "Seek emergency medical care and monitor the heart closely.",
       "imagePath": "plant-hand"
     },
     {
       "pageNumber": 2,
-      "title": "Oleander",
-      "content": "Oleander is a popular ornamental plant, but all parts of the plant are poisonous and can cause serious health issues if consumed.",
+      "plantName": "Water Hemlock",
+      "scientificName": "Cicuta virosa",
+      "symptoms": "Sudden seizures, vomiting, confusion and muscle spasms.",
+      "cause": "Powerful neurotoxins in the plant can severely affect the nervous system.",
+      "treatment": "Emergency treatment is needed to control seizures and support vital functions.",
       "imagePath": "trees"
     },
     {
       "pageNumber": 3,
-      "title": "Three",
-      "content": "333333333333333333333333333333333333 333333333333333333333333333          333333333333333333333333 3333333333333333333333333333 3 33333 3 3 3 3 333333333333333",
+      "plantName": "Lily of the Valley",
+      "scientificName": "Convallaria majalis",
+      "symptoms": "Vomiting, dizziness, weakness and an abnormal or slowed heartbeat.",
+      "cause": "Cardiac glycosides in the plant can interfere with heart function.",
+      "treatment": "Seek prompt medical care with monitoring of heart function.",
       "imagePath": "plant-hand"
     },
     {
       "pageNumber": 4,
-      "title": "Four",
-      "content": "4444444444444444444444444444444444    44444 44 4  4 4 4444444444444444444444444444444444   4444444444444444444444444444   444444444444444444444444444 444444444444444444444444444444444 4444444444444444444444444444444444 ",
+      "plantName": "Deadly Nightshade",
+      "scientificName": "Atropa belladonna",
+      "symptoms": "Dry mouth, enlarged pupils, rapid heartbeat, confusion and hallucinations.",
+      "cause": "Tropane alkaloids disrupt normal nervous-system function.",
+      "treatment": "Emergency medical treatment and supportive care are required.",
+      "imagePath": "trees"
+    },
+    {
+      "pageNumber": 5,
+      "plantName": "Monkshood",
+      "scientificName": "Aconitum spp.",
+      "symptoms": "Tingling, numbness, vomiting, weakness and abnormal heart rhythms.",
+      "cause": "Aconite alkaloids interfere with nerve and heart function.",
+      "treatment": "Immediate emergency care is needed to support breathing and heart function.",
+      "imagePath": "trees"
+    },
+    {
+      "pageNumber": 6,
+      "plantName": "Oleander",
+      "scientificName": "Nerium oleander",
+      "symptoms": "Nausea, vomiting, dizziness and dangerous changes in heart rhythm.",
+      "cause": "Cardiac glycosides in the plant can disrupt normal heart function.",
+      "treatment": "Seek immediate medical attention and monitor the heart.",
+      "imagePath": "plant-hand"
+    },
+    {
+      "pageNumber": 7,
+      "plantName": "Castor Bean",
+      "scientificName": "Ricinus communis",
+      "symptoms": "Severe vomiting, diarrhea, abdominal pain and dehydration.",
+      "cause": "The seeds contain ricin, a toxin that prevents cells from making essential proteins.",
+      "treatment": "Seek immediate medical care and provide supportive treatment.",
+      "imagePath": "plant-hand"
+    },
+    {
+      "pageNumber": 8,
+      "plantName": "Yew",
+      "scientificName": "Taxus baccata",
+      "symptoms": "Nausea, dizziness, weakness and dangerous changes in heart rhythm.",
+      "cause": "Taxine compounds in the plant can interfere with the heart.",
+      "treatment": "Immediate emergency care and cardiac monitoring are required.",
       "imagePath": "trees"
     }
   ]
