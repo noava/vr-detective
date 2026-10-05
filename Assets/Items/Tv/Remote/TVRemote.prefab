@@ -104,8 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9a7676b01585ce43908639a27765dfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interactorFilters:
-  - {fileID: 7217327731456249827}
+  _interactorFilters: []
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
@@ -167,7 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35181eeb40ed13148b0721382f49aba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.HandGrab.HandGrabUseInteractable
-  _interactorFilters: []
+  _interactorFilters:
+  - {fileID: 7217327731456249827}
   _maxInteractors: -1
   _maxSelectingInteractors: -1
   _data: {fileID: 0}
@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6ecba06b668d944b0a9b93e5f2324f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Oculus.Interaction::Oculus.Interaction.SecondaryInteractorFilter
-  _primaryInteractable: {fileID: 0}
-  _secondaryInteractable: {fileID: 0}
+  _primaryInteractable: {fileID: 7160201974015624399}
+  _secondaryInteractable: {fileID: 6290681054601364091}
   _selectRequired: 1
 --- !u!114 &2130874531414680139
 MonoBehaviour:
