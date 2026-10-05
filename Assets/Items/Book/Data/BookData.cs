@@ -5,10 +5,13 @@ using UnityEngine;
 public class BookPage
 {
     public int pageNumber;
-    public string title;
+    public string plantName;
+    public string scientificName;
     
     [TextArea(3, 10)] 
-    public string content;
+    public string symptoms;
+    public string cause;
+    public string treatment;
     public string imagePath;
 }
 
