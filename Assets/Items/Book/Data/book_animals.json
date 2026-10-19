@@ -1,0 +1,32 @@
+{
+  "bookTitle": "Sea creatures",
+  "pages": [
+    {
+      "pageNumber": 1,
+      "plantName": "Fish",
+      "scientificName": "",
+      "symptoms": "Fish lives under water. They have gills instead of lungs.",
+      "cause": "They can live in salt and fresh water.",
+      "treatment": "Fish also taste very good.",
+      "imagePath": ""
+    },
+    {
+      "pageNumber": 2,
+      "plantName": "Crab",
+      "scientificName": "",
+      "symptoms": "Crabs are what is called crustations.",
+      "cause": "They taste very good.",
+      "treatment": "You boil them alive.",
+      "imagePath": "SeaCreatures/crab_img"
+    },
+    {
+      "pageNumber": 3,
+      "plantName": "Lobster",
+      "scientificName": "",
+      "symptoms": "Lobsters are tasty.",
+      "cause": "It is not allowed to take a lobster female that has eggs.",
+      "treatment": "There are red and blue lobsters.",
+      "imagePath": ""
+    }
+  ]
+}

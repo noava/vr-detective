@@ -1666,6 +1666,10 @@ PrefabInstance:
       propertyPath: _rotationSnapAngle._value
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 1838289475393856967, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1913997614589834786, guid: 0a7d2469f24041c4284c66706f84c45e, type: 3}
       propertyPath: m_IsActive
       value: 0

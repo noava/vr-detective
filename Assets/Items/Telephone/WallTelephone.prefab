@@ -534,7 +534,6 @@ MonoBehaviour:
   radialDivision: 6
   material: {fileID: 2100000, guid: f52cb0e1226a55b4ca493e866dbbec3a, type: 2}
   tilingPerMeter: 1
-  ropeLength: 0.86953473
 --- !u!1 &2690387303901785629
 GameObject:
   m_ObjectHideFlags: 0
