@@ -8,7 +8,7 @@
       "symptoms": "Fish lives under water. They have gills instead of lungs.",
       "cause": "They can live in salt and fresh water.",
       "treatment": "Fish also taste very good.",
-      "imagePath": ""
+      "imagePath": "SeaCreatures/crab_img"
     },
     {
       "pageNumber": 2,
@@ -26,7 +26,7 @@
       "symptoms": "Lobsters are tasty.",
       "cause": "It is not allowed to take a lobster female that has eggs.",
       "treatment": "There are red and blue lobsters.",
-      "imagePa,th": ""
+      "imagePath": "SeaCreatures/crab_img"
     },
     {
       "pageNumber": 4,
@@ -35,7 +35,7 @@
       "symptoms": "Lobsters are tasty.",
       "cause": "It is not allowed to take a lobster female that has eggs.",
       "treatment": "There are red and blue lobsters.",
-      "imagePa,th": ""
+      "imagePath": "SeaCreatures/crab_img"
     },
     {
       "pageNumber": 5,
@@ -44,7 +44,7 @@
       "symptoms": "Lobsters are tasty.",
       "cause": "It is not allowed to take a lobster female that has eggs.",
       "treatment": "There are red and blue lobsters.",
-      "imagePa,th": ""
+      "imagePath": "SeaCreatures/crab_img"
     },
     {
       "pageNumber": 6,
@@ -53,7 +53,7 @@
       "symptoms": "Lobsters are tasty.",
       "cause": "It is not allowed to take a lobster female that has eggs.",
       "treatment": "There are red and blue lobsters.",
-      "imagePa,th": ""
+      "imagePath": "SeaCreatures/crab_img"
     },
     {
       "pageNumber": 7,
@@ -62,7 +62,7 @@
       "symptoms": "Lobsters are tasty.",
       "cause": "It is not allowed to take a lobster female that has eggs.",
       "treatment": "There are red and blue lobsters.",
-      "imagePa,th": ""
+      "imagePath": ""
     },
     {
       "pageNumber": 7,
@@ -71,7 +71,7 @@
       "symptoms": "Lobsters are tasty.",
       "cause": "It is not allowed to take a lobster female that has eggs.",
       "treatment": "There are red and blue lobsters.",
-      "imagePa,th": ""
+      "imagePath": ""
     }
   ]
 }

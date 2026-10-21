@@ -4,9 +4,9 @@ using TMPro;
 public class WinCondition : MonoBehaviour
 {
     public TextMeshPro statusTextObject;
-    private string _weaponName = "Cassette";
-    private string _victimName = "Cassette";
-    private string _murdererName = "Cassette";
+    private string _weaponName = "Hammer";
+    private string _victimName = "VictimName";
+    private string _murdererName = "Suspect_2";
 
     private bool _isWeaponCorrect = false;
     private bool _isVictimCorrect = false;
@@ -14,11 +14,12 @@ public class WinCondition : MonoBehaviour
 
     public void UpdateWeapon (GameObject snappedObject)
     {
+        Debug.Log("-------------------------------" + snappedObject + "-------------------------------" + snappedObject.name);
         if (snappedObject == null) return;
 
         if (snappedObject.name == _weaponName)
         {
-            Debug.Log("Weapon is correct!");
+            Debug.Log("Weapon is correct!" + snappedObject.name);
             _isWeaponCorrect = true;
             CheckIfWon();
         }
@@ -30,7 +31,7 @@ public class WinCondition : MonoBehaviour
 
         if (snappedObject.name == _victimName)
         {
-            Debug.Log("Victim is correct!");
+            Debug.Log("Victim is correct!" + snappedObject.name);
             _isVictimCorrect = true;
             CheckIfWon();
         }
@@ -42,7 +43,7 @@ public class WinCondition : MonoBehaviour
 
         if (snappedObject.name == _murdererName)
         {
-            Debug.Log("Murderer is correct!");
+            Debug.Log("Murderer is correct!" + snappedObject.name);
             _isMurdererCorrect = true;
             CheckIfWon();
         }
@@ -69,6 +70,8 @@ public class WinCondition : MonoBehaviour
         if (_isWeaponCorrect && _isVictimCorrect && _isMurdererCorrect)
         {
             statusTextObject.text = "You solved the case!";
+            Debug.Log("YOU WON!!!!!!!");
         }
+        Debug.Log("YOU HAVE NOT WON!");
     }
 }
