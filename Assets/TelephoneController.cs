@@ -31,6 +31,7 @@ public class TelephoneController : MonoBehaviour
 
         audioSource.clip = ringingClip; 
         audioSource.loop = true; 
+        audioSource.volume = 0.5f; 
         audioSource.Play(); 
     } 
     
