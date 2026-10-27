@@ -13,6 +13,8 @@ public class BookManager : MonoBehaviour
     public TextMeshProUGUI pageContentCause;
     public TextMeshProUGUI pageContentTreatment;
     public Image pageImage;
+    public GameObject previousPageArrow;
+    public GameObject nextPageArrow;
 
     private BookData activeBook;
     private int currentPageIndex = 0;
@@ -32,6 +34,7 @@ public class BookManager : MonoBehaviour
     public void LoadBook(string jsonText)
     {
         activeBook = JsonUtility.FromJson<BookData>(jsonText);
+        currentPageIndex = 0;
         bookTitleOpen.text = activeBook.bookTitle;
         bookTitleClosed.text = activeBook.bookTitle;
         ShowPage(0);
@@ -52,6 +55,9 @@ public class BookManager : MonoBehaviour
         {
             pageImage.sprite = allSprites[0];
         }
+
+        previousPageArrow.SetActive(currentPageIndex > 0);
+        nextPageArrow.SetActive(currentPageIndex < activeBook.pages.Count - 1);
     }
 
     [ContextMenu("Next Page")]
