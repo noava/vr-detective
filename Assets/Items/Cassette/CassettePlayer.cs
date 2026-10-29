@@ -45,12 +45,13 @@ public class CassettePlayer : MonoBehaviour
 
     public void PauseCassette()
     {
+        Debug.Log("PAUSE ACTIVATED-------------------------------");
         if (_audioSource != null && _audioSource.isPlaying)
         {
             _audioSource.Pause();
+            Debug.Log("NOW IT IT PAUSED-------------------------------");
         }
 
-        _audioSource.PlayOneShot(buttonPressSound, 1);
     }
 
     public void StopCassette()
