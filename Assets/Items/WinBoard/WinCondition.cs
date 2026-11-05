@@ -4,9 +4,9 @@ using TMPro;
 public class WinCondition : MonoBehaviour
 {
     public TextMeshPro statusTextObject;
-    private string _weaponName = "Hammer";
+    private string _weaponName = "Poison";
     private string _victimName = "VictimName";
-    private string _murdererName = "Suspect_2";
+    private string _murdererName = "Suspect_3";
 
     private bool _isWeaponCorrect = false;
     private bool _isVictimCorrect = false;
