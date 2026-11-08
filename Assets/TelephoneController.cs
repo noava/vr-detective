@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TelephoneController : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class TelephoneController : MonoBehaviour
     [SerializeField] private AudioClip ringingClip;
     [SerializeField] private AudioClip dialtoneClip;
     [SerializeField] private AudioClip phonePickupPutdownClip;
+    [SerializeField] private AudioClip winPhoneCall;
  
     //voice lines
     [SerializeField] private AudioClip phoneclip_1;
     
     //variables
     public bool phoneHasIntearcted_1 = false;
+    public bool hasWon = false;
 
     //Buttons
     [SerializeField] private Button replayButton_1;
@@ -24,6 +27,7 @@ public class TelephoneController : MonoBehaviour
     {
         replayButton_1.interactable = false;
         PhoneRinging();
+
     }
 
     public void PhoneRinging()
@@ -84,6 +88,9 @@ public class TelephoneController : MonoBehaviour
         {
             audioSource_voice.PlayOneShot(phoneclip_1);
             phoneHasIntearcted_1 = true;
+        } else if (phoneHasIntearcted_1 && !hasWon){
+            audioSource_voice.PlayOneShot(winPhoneCall);
+            hasWon = true;
         }
         else
         {
@@ -111,3 +118,8 @@ public class TelephoneController : MonoBehaviour
     }
 
 }
+
+
+
+
+

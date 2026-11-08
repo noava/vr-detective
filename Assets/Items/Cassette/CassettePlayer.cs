@@ -3,6 +3,7 @@ using UnityEngine;
 public class CassettePlayer : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioSource _audioSource_pause;
     [SerializeField] private AudioClip  insertTakeoutSound;
     [SerializeField] private AudioClip  buttonPressSound;
 
@@ -49,9 +50,9 @@ public class CassettePlayer : MonoBehaviour
         if (_audioSource != null && _audioSource.isPlaying)
         {
             _audioSource.Pause();
-            Debug.Log("NOW IT IT PAUSED-------------------------------");
         }
 
+        _audioSource_pause.PlayOneShot(buttonPressSound, 0.5f);
     }
 
     public void StopCassette()

@@ -14,7 +14,7 @@ public class WinCondition : MonoBehaviour
 
     public void UpdateWeapon (GameObject snappedObject)
     {
-        Debug.Log("-------------------------------" + snappedObject + "-------------------------------" + snappedObject.name);
+        Debug.Log("--------------------WEAPON-----------" + snappedObject.name + "-------------------------------");
         if (snappedObject == null) return;
 
         if (snappedObject.name == _weaponName)
@@ -27,6 +27,7 @@ public class WinCondition : MonoBehaviour
 
     public void UpdateVictim (GameObject snappedObject)
     {
+        Debug.Log("--------------------VICTIM-----------" + snappedObject.name + "-------------------------------");
         if (snappedObject == null) return;
 
         if (snappedObject.name == _victimName)
@@ -39,6 +40,7 @@ public class WinCondition : MonoBehaviour
 
     public void UpdateMurderer (GameObject snappedObject)
     {
+        Debug.Log("--------------------MURDERER-----------" + snappedObject.name + "-------------------------------");
         if (snappedObject == null) return;
 
         if (snappedObject.name == _murdererName)
@@ -65,12 +67,17 @@ public class WinCondition : MonoBehaviour
         }
     }
 
+
+    public TelephoneController telephoneController;
     private void CheckIfWon()
     {
         if (_isWeaponCorrect && _isVictimCorrect && _isMurdererCorrect)
         {
             statusTextObject.text = "You solved the case!";
             Debug.Log("YOU WON!!!!!!!");
+        
+            telephoneController.PhoneRinging();
+            
         }
         Debug.Log("YOU HAVE NOT WON!");
     }
