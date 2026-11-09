@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class TelephoneController : MonoBehaviour
 {
-
     public AudioSource audioSource_voice;
     public AudioSource audioSource_ringing;
     [SerializeField] private AudioClip ringingClip;
@@ -23,11 +22,12 @@ public class TelephoneController : MonoBehaviour
     //Buttons
     [SerializeField] private Button replayButton_1;
 
-   void Start()
+    [HideInInspector] public OVRScreenFade screenFader;
+
+    void Start()
     {
         replayButton_1.interactable = false;
         PhoneRinging();
-
     }
 
     public void PhoneRinging()
@@ -40,8 +40,6 @@ public class TelephoneController : MonoBehaviour
         audioSource_ringing.Play(); 
     } 
     
-
-    //Work in progress - currently not used anywhere
     public void DialTone()
     {
         audioSource_voice.clip = dialtoneClip;
@@ -49,12 +47,10 @@ public class TelephoneController : MonoBehaviour
         audioSource_voice.Play();
     }
 
-    //when placing phone back into socket stop sound
     public void TelephoneInsert(GameObject snappedObject)
     {
         if (snappedObject == null) return;
 
-        // Stop any current audio, including the voice message or dial tone
         audioSource_voice.Stop();
         audioSource_voice.loop = false;
 
@@ -63,34 +59,32 @@ public class TelephoneController : MonoBehaviour
         replayButton_1.interactable = true;
     }
 
-
-    //REPLAY MESSAGES
-    public void ReplayMessage_1(){
+    public void ReplayMessage_1()
+    {
         Debug.Log("Replay");
-        //if (snappedObject != null) return;
         phoneHasIntearcted_1 = false;
         PhoneRinging();
     }
-
     
-    //When you pick it up or remove it
     public void OnTelephonePickup()
     {
         Debug.Log("PICKED UP________________________" + phoneHasIntearcted_1);
-        //stop ringing sound
+        
         audioSource_ringing.Stop(); 
         audioSource_ringing.loop = false;
 
         audioSource_voice.PlayOneShot(phonePickupPutdownClip, 1);
 
-        //FIRST PHONE CALL
+        // FIRST PHONE CALL
         if (!phoneHasIntearcted_1)
         {
             audioSource_voice.PlayOneShot(phoneclip_1);
             phoneHasIntearcted_1 = true;
-        } else if (phoneHasIntearcted_1 && !hasWon){
-            audioSource_voice.PlayOneShot(winPhoneCall);
-            hasWon = true;
+        } 
+        // WINNING CALL
+        else if (phoneHasIntearcted_1 && !hasWon)
+        {
+            StartCoroutine(WinAndFadeOutSequence());
         }
         else
         {
@@ -100,10 +94,69 @@ public class TelephoneController : MonoBehaviour
         replayButton_1.interactable = false;
     }
 
+    private IEnumerator WinAndFadeOutSequence()
+    {
+        hasWon = true;
+        
+        // 1. Start lydklippet med en gang
+        audioSource_voice.PlayOneShot(winPhoneCall);
+
+        // 2. Finn OVRScreenFade automatisk i scenen
+        if (screenFader == null)
+        {
+            screenFader = Object.FindAnyObjectByType<OVRScreenFade>();
+        }
+
+        // Tvinger en trygg standard fadetid hvis komponenten ikke svarer raskt nok
+        float fadeDuration = 2.0f;
+        if (screenFader != null && screenFader.fadeTime > 0.1f)
+        {
+            fadeDuration = screenFader.fadeTime;
+        }
+        
+        // 3. Vent i lyset til det gjenstår nøyaktig 'fadeDuration' sekunder av lyden
+        float totalAudioLength = winPhoneCall != null ? winPhoneCall.length : 5.0f;
+        float timeToWaitBeforeFade = totalAudioLength - fadeDuration;
+        
+        if (timeToWaitBeforeFade > 0)
+        {
+            yield return new WaitForSeconds(timeToWaitBeforeFade);
+        }
+
+        // 4. PASSTHROUGH SIKKERHETS-FIKS: 
+        // Vi leter etter absolutt alle forekomster av Metas Passthrough-komponent i hele scenen
+        OVRPassthroughLayer[] passthroughLayers = Object.FindObjectsByType<OVRPassthroughLayer>(FindObjectsSortMode.None);
+        foreach (OVRPassthroughLayer layer in passthroughLayers)
+        {
+            if (layer != null)
+            {
+                // Deaktiverer komponenten direkte (eller hele objektet den sitter på)
+                layer.enabled = false; 
+                layer.gameObject.SetActive(false); 
+            }
+        }
+
+        // 5. Start den dype fade-outen til svart
+        if (screenFader != null)
+        {
+            screenFader.FadeOut();
+        }
+
+        // Vent til faden er helt ferdig spilt og lyden kutter ut
+        yield return new WaitForSeconds(fadeDuration);
+
+        // 6. Last hovedmenyen asynkront i bakgrunnen uten VR-lag
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("MAIN MENU");
+        
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+    }
+
     private bool firstTime = true;
     
-    //When you pick it up or remove it
-    public void FirstTimePickup() //runs only the VERY FIRST TIME
+    public void FirstTimePickup() 
     {
         if (firstTime) {
             audioSource_ringing.Stop(); 
@@ -112,14 +165,6 @@ public class TelephoneController : MonoBehaviour
             audioSource_voice.PlayOneShot(phoneclip_1);
             firstTime = false;
             phoneHasIntearcted_1 = true;
-        }else{
-            return;
         }
     }
-
 }
-
-
-
-
-
