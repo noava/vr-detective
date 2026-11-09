@@ -12,18 +12,19 @@ public class SceneFadeIn : MonoBehaviour
 
     private bool isMutePeriod = true;
     private List<MonoBehaviour> disabledSoundScripts = new List<MonoBehaviour>();
+    
+    // NY: Liste for å huske hvilke "Play on Awake"-lyder vi avbrøt, slik at de kan startes på nytt
+    private List<AudioSource> interceptedPlayOnAwakeSources = new List<AudioSource>();
 
     private bool hasStarted = false;
 
     void Awake()
     {
-        //passthrough start off
         if (passthroughBuildingBlock != null)
         {
             passthroughBuildingBlock.SetActive(false);
         }
 
-        //mute everything
         AudioListener.pause = true;
         AudioListener.volume = 0f;
     }
@@ -41,12 +42,17 @@ public class SceneFadeIn : MonoBehaviour
     {
         while (isMutePeriod)
         {
-            
             AudioSource[] allSources = Object.FindObjectsByType<AudioSource>(FindObjectsSortMode.None);
             foreach (AudioSource source in allSources)
             {
-                if (source != null && source.isPlaying)
+                if (source != null && (source.isPlaying || source.playOnAwake))
                 {
+                    // Hvis denne kilden var satt til å spille automatisk, husker vi den
+                    if (source.playOnAwake && !interceptedPlayOnAwakeSources.Contains(source))
+                    {
+                        interceptedPlayOnAwakeSources.Add(source);
+                    }
+
                     source.Stop(); 
                     source.playOnAwake = false; 
                 }
@@ -72,7 +78,7 @@ public class SceneFadeIn : MonoBehaviour
 
         isMutePeriod = false;
 
-        //turn on collision
+        // Turn on collision scripts
         foreach (MonoBehaviour script in disabledSoundScripts)
         {
             if (script != null) script.enabled = true;
@@ -80,11 +86,20 @@ public class SceneFadeIn : MonoBehaviour
 
         yield return new WaitForSeconds(0.1f);
 
-        // turn on audio
+        // Turn on audio listener
         AudioListener.pause = false;
         AudioListener.volume = 1f;
 
-        // turn on passthrough
+        // FIKS: Start alle de legitime "Play on Awake"-lydene som vi midlertidig stoppet
+        foreach (AudioSource source in interceptedPlayOnAwakeSources)
+        {
+            if (source != null)
+            {
+                source.Play();
+            }
+        }
+
+        // Turn on passthrough
         if (passthroughBuildingBlock != null)
         {
             passthroughBuildingBlock.SetActive(true);
