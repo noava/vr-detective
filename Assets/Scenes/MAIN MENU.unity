@@ -2531,8 +2531,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1634b7b8959d8034a92c49558d2a0664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneFadeIn
-  screenFader: {fileID: 2056411519}
   passthroughBuildingBlock: {fileID: 0}
+  collisionScriptClassName: Object Impact Sound
 --- !u!4 &1069739464
 Transform:
   m_ObjectHideFlags: 0
@@ -5528,7 +5528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Oculus.VR::OVRScreenFade
   fadeTime: 2
   fadeColor: {r: 0.01, g: 0.01, b: 0.01, a: 1}
-  fadeOnStart: 1
+  fadeOnStart: 0
   renderQueue: 5000
 --- !u!1 &2073238369
 GameObject:

@@ -1883,8 +1883,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1634b7b8959d8034a92c49558d2a0664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FadeIn
-  screenFader: {fileID: 1440574168}
   passthroughBuildingBlock: {fileID: 993591773}
+  collisionScriptClassName: Object Impact Sound
 --- !u!1001 &1710852272
 PrefabInstance:
   m_ObjectHideFlags: 0
